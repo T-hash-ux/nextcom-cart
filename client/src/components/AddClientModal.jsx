@@ -1,3 +1,5 @@
+// Set up AddClient react frontend for the "add client" modal and button
+
 // This section is importing the `useState` hook from React
 import { useState } from "react"
 // Importing the `FaUser` icon from the `react-icons/fa` package
