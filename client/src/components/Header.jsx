@@ -1,8 +1,6 @@
-    // I set up the header component with a logo and project name on the React front end.
+import logo from "./assets/logo.jpg"
 
-
-import logo from './assets/logo.png';
-
+// I set up the header component with a logo and project name on the React front end.
 export default function Header() {
     return (
         <nav className='nav bg-light mb-4 p-0'>

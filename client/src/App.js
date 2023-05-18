@@ -1,9 +1,10 @@
 // This code is setting up the main application component (App) for a React application that uses Apollo Client for GraphQL integration.
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
-import Clients from './components/Clients';
-import AddClientModal from "./components/AddClientModal";
-
+import Home from './pages/Home';
+import Project from './pages/Project';
+import NotFound from './pages/NotFound';
 const cache = new InMemoryCache({
     typePolicies: {
       Query: {
@@ -32,12 +33,17 @@ const cache = new InMemoryCache({
     return (
       <>
       <ApolloProvider client={client}>
+        <Router>
       <Header />
       <div className="container">
-        <AddClientModal/>
-        <Clients />
-      </div>
-      </ApolloProvider>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/project/:id' element={<Project />} />
+            <Route path='*' element={<NotFound/>} />
+        </Routes>
+        </div>
+        </Router>
+        </ApolloProvider>
       </>
     );
   }
