@@ -36,6 +36,9 @@ export default function AddClientModal() {
 
     return (
         <>
+        { !loading && !error && (
+            <>
+
         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target='#addProjectModal'>
   <div className="d-flex align-items-center">
     <FaList className='icon' />
@@ -75,6 +78,21 @@ export default function AddClientModal() {
                     <option value="completed">Completed</option>
                 </select>
             </div>
+            <div className='mb-3'>
+                <label className="form-label">Client</label>
+                <select id="clientId" className="form-select" value={clientId} onChange={(e) => setClientId
+                (e.target.value)}>
+                    <option value="">Select Client</option>
+                    { data.clients.map((client) => (
+                        <option key={client.id} value={client.id}>
+
+                            { client.name}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+
             <button type="submit" data-bs-dismiss="modal" className="btn btn-primary">Submit</button>
         </form>
       </div>
@@ -82,6 +100,8 @@ export default function AddClientModal() {
       </div>
     </div>
   </div>
+            </>
+        )}
 </>
 );
 }
