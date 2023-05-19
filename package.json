@@ -1,28 +1,26 @@
 {
   "name": "project-mngmt",
-  "homepage": "http://T-hash-ux.github.io/project-management",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project Xcel",
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/T-hash-ux/project-management"
+    "url": "git+https://github.com/T-hash-ux/project-management.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/T-hash-ux/project-mngmt/issues"
+  "url": "https://github.com/T-hash-ux/project-mngmt/issues"
   },
   "dependencies": {
     "colors": "^1.4.0",

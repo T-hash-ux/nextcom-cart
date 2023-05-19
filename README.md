@@ -39,6 +39,7 @@ This web application is for anyone who needs a system to organize their projects
 
 
 
+
  ## Credits 
 YouTube & Class notes
 
@@ -51,3 +52,5 @@ Collabators:
 ## License
  MIT License
  
+
+ Deployed Link:  https://t-hash-ux.github.io/project-management/
