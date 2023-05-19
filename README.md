@@ -26,7 +26,4 @@ Collabators:
 
 ## License
  MIT License
-
-
- 
  
