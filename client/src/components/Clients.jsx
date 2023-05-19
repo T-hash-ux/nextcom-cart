@@ -6,9 +6,13 @@ import { GET_CLIENTS } from '../queries/clientQueries';
 
 
 export default function Clients() {
+    // Use the useQuery hook to fetch the clients data
     const { loading, error, data } = useQuery(GET_CLIENTS);
+// If the data is still loading, render a Spinner component
 
     if (loading) return <Spinner />;
+  // If there's an error while fetching the data, render an error message
+  
     if (error) return <p>Something Went Wrong</p>;
 
     return (
