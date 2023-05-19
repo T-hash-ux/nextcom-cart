@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-
+// This Mutation is set up the Add a project along with the project information
 const ADD_PROJECT = gql`
     mutation AddProject($name: 
         String!
@@ -28,7 +28,7 @@ const ADD_PROJECT = gql`
     }
 
 `;
-
+// This Mutation is set up the Delete a project by selecting the project Id
 const DELETE_PROJECT = gql`
     mutation DeleteProject($id: ID!) {
         deleteProject(id: $id) {
@@ -37,7 +37,7 @@ const DELETE_PROJECT = gql`
     }
 
 `;
-
+//  This Mutation is Designed to update a project as well as the data
 const UPDATE_PROJECT = gql`
     mutation UpdateProject(
         $id: ID!

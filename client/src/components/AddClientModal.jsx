@@ -8,7 +8,7 @@ import {FaUser} from 'react-icons/fa';
 import { useMutation } from "@apollo/client";
 import { ADD_CLIENT } from "../mutations/clientMutations";
 import { GET_CLIENTS } from "../queries/clientQueries";
-
+// The component utilizes the useState hook from React to define three state variables: name, email, and phone. Each state variable is initialized with an empty string as the initial value.
 export default function AddClientModal() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ export default function AddClientModal() {
        });
      },
   });
-
+// The onSubmit function is triggered when the form is submitted. It prevents the default form submission behavior using e.preventDefault().
   const onSubmit = (e) => {
     e.preventDefault();
  
@@ -88,3 +88,4 @@ export default function AddClientModal() {
 
 }
 
+// Overall, this code sets up an "Add Client" modal with form inputs and handles the submission of the form using Apollo Client's mutation capabilities.

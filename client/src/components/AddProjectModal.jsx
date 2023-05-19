@@ -1,3 +1,5 @@
+// Overall, this code sets up an "Add Project" modal with form inputs and handles the submission of the form using Apollo Client's mutation and query capabilities. It also includes loading and error handling for the query result.
+
 import { useState } from "react"
 import {FaList} from 'react-icons/fa';
 import { useMutation, useQuery } from "@apollo/client";

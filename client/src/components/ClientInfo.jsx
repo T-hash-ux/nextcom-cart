@@ -1,3 +1,5 @@
+// this code defines a component that displays client information using icons and corresponding data. The component receives a client prop containing the client object, and it renders the client's name, email, and phone number using the appropriate icons from the react-icons/fa package.
+
 import { FaEnvelope, FaPhone, FaIdBadge } from "react-icons/fa"
 
 export default function ClientInfo({ client }) {

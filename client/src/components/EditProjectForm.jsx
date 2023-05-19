@@ -4,12 +4,16 @@ import { GET_PROJECT } from '../queries/projectQueries';
 import { UPDATE_PROJECT } from '../mutations/ProjectMutations'
 
 export default function EditProjectForm({ project }) {
+
+     // State variables to store the project details
     const [name, setName] = useState(project.name);
     const [description, setDescription] = useState(project.description);
     const [status, setStatus] = useState('');
 
     const [updateProject] = useMutation(UPDATE_PROJECT, {
         variables: { id: project.id, name, description, status }, 
+
+        // Refetch the GET_PROJECT query with updated project details
         refetchQueries: [{ query: GET_PROJECT, variables: { id: project.id } }],
     })
 

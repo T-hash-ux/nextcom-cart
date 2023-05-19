@@ -7,10 +7,17 @@ import { useMutation } from '@apollo/client';
 export default function DeletProjectButton({ projectId }) {
 
     const navigate = useNavigate();
+// Use the useNavigate hook from react-router-dom to handle navigation
 
     const [deleteProject] = useMutation(DELETE_PROJECT, {
         variables: { id: projectId },
+
+        // When the deletion is completed, navigate to the home page
+
         onCompleted: () => navigate('/'),
+
+                // Refetch the GET_PROJECTS query after deletion to update the project list
+
         refetchQueries: [{ query: GET_PROJECTS }],
     });
 
