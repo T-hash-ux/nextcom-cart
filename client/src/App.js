@@ -1,5 +1,5 @@
 // This code is setting up the main application component (App) for a React application that uses Apollo Client for GraphQL integration.
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
@@ -38,7 +38,7 @@ const cache = new InMemoryCache({
       <div className="container">
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/project/:id' element={<Project />} />
+            <Route path='/projects/:id' element={<Project />} />
             <Route path='*' element={<NotFound/>} />
         </Routes>
         </div>

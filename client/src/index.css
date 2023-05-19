@@ -29,14 +29,13 @@ body {
     font-size: 15px;
   }
   
-  .btn-primary,
-  .bg-primary {
-    background-color: #d12023 !important;
+  .btn-primary {
+    background-color: #1e940a !important;
     border: none;
   }
   
   .btn-primary:hover {
-    background-color: #a99aa4;
+    background-color: #bab2b7;
     opacity: 0.9;
   }
   
